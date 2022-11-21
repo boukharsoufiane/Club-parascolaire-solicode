@@ -113,7 +113,7 @@ function validTell(){
 
 function validEmail(){
     let email = document.getElementById('email').value;
-    let validRegex = /^[a-zA-Z-.]+@{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
+    let validRegex = /^[a-zA-Z]+[.]+[a-zA-Z]+@{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
     document.getElementById('email').setAttribute("type", "email");
     console.log(validRegex.test(email));
     
