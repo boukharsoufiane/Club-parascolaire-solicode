@@ -4,7 +4,7 @@ function inscription(){
     let email = document.getElementById('email').value;
     document.getElementById('email').setAttribute("type", "email");
     let tele = document.getElementById('tele').value;
-    document.getElementById('tele').setAttribute("type", "number");
+    document.getElementById('tele').setAttribute("type", "tel");
     let checkboxes = document.querySelectorAll('input[name="a"]:checked');
     let checkboxes1 = document.querySelectorAll('input[name="b"]:checked');
     let phoneRGEX = /^[(]{0,1}[0]{1}[)]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
