@@ -7,7 +7,7 @@ function inscription(){
     document.getElementById('tele').setAttribute("type", "tel");
     let checkboxes = document.querySelectorAll('input[name="a"]:checked');
     let checkboxes1 = document.querySelectorAll('input[name="b"]:checked');
-    let phoneRGEX = /^[(]{0,1}[0]{1}[)]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
+    let phoneRGEX = /^[0]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
     let validRegex = /^[a-zA-Z]+[.]+[a-zA-Z]+@{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
     let regName = /^[a-zA-Z]{3,30}$/;
     let values = [];
@@ -73,10 +73,6 @@ function validName(){
         document.getElementById('nom').style.border='3px solid green';
         document.getElementById('nom').style.background='rgb(130, 246, 130)';   
     }
-    // if(nom.length <= 30 && regName.test(nom)){
-    //     document.getElementById('nom').style.border='3px solid green';
-    //     document.getElementById('nom').style.background='rgb(130, 246, 130)';
-    // }
 }
 
 function validPrenom(){
@@ -96,7 +92,7 @@ function validPrenom(){
 
 function validTell(){
     let tele = document.getElementById('tele').value;
-    let phoneRGEX = /^[(]{0,1}[0]{1}[)]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
+    let phoneRGEX = /^[0]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
     document.getElementById('tele').setAttribute("type", "tel");
     let phone = tele.length;
     if(phoneRGEX.test(tele)&&phone==10){
