@@ -9,7 +9,7 @@ function inscription(){
     let checkboxes1 = document.querySelectorAll('input[name="b"]:checked');
     let phoneRGEX = /^[(]{0,1}[0]{1}[)]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
     let validRegex = /^[a-zA-Z-.]+@{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
-    let regName = /^[a-zA-Z ]+$/;
+    let regName = /^[a-zA-Z]{3,30}$/;
     let values = [];
     let values1 = [];
     checkboxes.forEach((checkbox) => {
@@ -64,26 +64,30 @@ function inscription(){
 
 function validName(){
     let nom = document.getElementById('nom').value;
-    let regName = /^[a-zA-Z]+$/;
-    if (nom.length == "" || nom.length > 30) {
+    let regName = /^[a-zA-Z]{3,30}$/;
+    if (regName.test(nom)===false){
         document.getElementById('nom').style.border='3px solid red';
         document.getElementById('nom').style.background='rgb(248, 147, 147)';
     }
-    if(nom.length <= 30 && regName.test(nom)){
+    else{
         document.getElementById('nom').style.border='3px solid green';
-        document.getElementById('nom').style.background='rgb(130, 246, 130)';
+        document.getElementById('nom').style.background='rgb(130, 246, 130)';   
     }
+    // if(nom.length <= 30 && regName.test(nom)){
+    //     document.getElementById('nom').style.border='3px solid green';
+    //     document.getElementById('nom').style.background='rgb(130, 246, 130)';
+    // }
 }
 
 function validPrenom(){
     let prenom = document.getElementById('prenom').value;
-    let regName = /^[a-zA-Z ]+$/;
-    if (prenom.length == "" || prenom.length > 30 ) {
+    let regName = /^[a-zA-Z]{3,30}$/;
+    if (regName.test(prenom)===false) {
         document.getElementById('prenom').style.border='3px solid red';
         document.getElementById('prenom').style.background='rgb(248, 147, 147)';
 
     }
-    if(prenom.length <= 30 && regName.test(prenom)){
+    else{
         document.getElementById('prenom').style.border='3px solid green';
         document.getElementById('prenom').style.background='rgb(130, 246, 130)';
 
