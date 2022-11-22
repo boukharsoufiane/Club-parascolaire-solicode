@@ -137,6 +137,58 @@ function validEmail(){
     }
 }
 
+function ValidG(){
+    let check = document.getElementById('Féminin').checked;
+    if(check == true){
+        document.getElementById('return5').innerHTML="Votre genre est valide"
+        document.getElementById('return5').style.color="green";
+    }
+}
+function validG1(){
+    let check1 = document.getElementById('Masculin').checked;
+    if(check1 == true){
+        document.getElementById('return5').innerHTML="Votre genre est valide"
+        document.getElementById('return5').style.color="green";
+    }
+}
+function validG2(){
+    let check2 = document.getElementById('DW101').checked;
+ if(check2 == true){
+    document.getElementById('return6').innerHTML="Votre groupe est valide"
+    document.getElementById('return6').style.color="green";
+ }
+ 
+}
+
+function validG3(){
+    let check3 = document.getElementById('DW102').checked;
+    if(check3 == true){
+       document.getElementById('return6').innerHTML="Votre groupe est valide"
+       document.getElementById('return6').style.color="green";
+    }
+}
+function validG4(){
+    let check4 = document.getElementById('DW103').checked;
+    if(check4 == true){
+       document.getElementById('return6').innerHTML="Votre groupe est valide"
+       document.getElementById('return6').style.color="green";
+    }
+}
+function validG5(){
+    let check5 = document.getElementById('DM101').checked;
+    if(check5 == true){
+       document.getElementById('return6').innerHTML="Votre groupe est valide"
+       document.getElementById('return6').style.color="green";
+    }
+}
+function validG6(){
+    let check6 = document.getElementById('DM102').checked;
+    if(check6 == true){
+       document.getElementById('return6').innerHTML="Votre groupe est valide"
+       document.getElementById('return6').style.color="green";
+    }
+}
+
 function reset(){
     let check = document.getElementById('Féminin').checked;
     let check1 = document.getElementById('Masculin').checked;
