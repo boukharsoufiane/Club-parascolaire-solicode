@@ -8,7 +8,7 @@ function inscription(){
     let checkboxes = document.querySelectorAll('input[name="a"]:checked');
     let checkboxes1 = document.querySelectorAll('input[name="b"]:checked');
     let phoneRGEX = /^[0]{0,1}[5-7]{0,1}[0-9]{3}[0-9]{0,1}[0-9]{4}$/;
-    let validRegex = /^[a-zA-Z]+[.]{1}[a-zA-Z]+[@]{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
+    let validRegex = /^[a-zA-Z]+[.]{1}[a-zA-Z]+[@]+[ofppt]+\.+(ma)$/;
     let regName = /^[a-zA-Z]{3,30}$/;
     let values = [];
     let values1 = [];
@@ -120,7 +120,7 @@ function validTell(){
 
 function validEmail(){
     let email = document.getElementById('email').value;
-    let validRegex = /^[a-zA-Z]+[.]{1}[a-zA-Z]+[@]{1}[o]{1}[f]{1}[p]{2}[t]{1}[.]{1}[m]{1}[a]{1}$/;
+    let validRegex = /^[a-zA-Z]+[.]{1}[a-zA-Z]+[@]+[ofppt]+\.+(ma)$/;
     document.getElementById('email').setAttribute("type", "email");
     console.log(validRegex.test(email));
     
