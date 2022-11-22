@@ -24,6 +24,7 @@ function inscription(){
         if (option.selected) {
             selected.push(option.value);
         }
+
     }
     let tab = "Votre Nom est :" + " " + nom + "<br>" + "<br>"+ "Votre Prénom est :" + " " + " " + prenom + "<br>"+"<br>" + "Votre Email est :" + " " + " " + email + "<br>"+ "<br>" + "Votre Télephone est :" + " " +  " " +tele + "<br>"+ "<br>" + "Votre Genre est :" + " " + " " + values + "<br>"+ "<br>" + "Votre Group est :" + " " + " " + values1 + "<br>"+ "<br>" + "Votre choix du Club(s) est :" + " " + " " + selected;
     if (nom.length == "" || nom.length > 30 || regName.test(nom)===false) {
