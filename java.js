@@ -26,16 +26,16 @@ function inscription(){
         }
     }
     let tab = "Votre Nom est :" + " " + nom + "<br>" + "<br>"+ "Votre Prénom est :" + " " + " " + prenom + "<br>"+"<br>" + "Votre Email est :" + " " + " " + email + "<br>"+ "<br>" + "Votre Télephone est :" + " " +  " " +tele + "<br>"+ "<br>" + "Votre Genre est :" + " " + " " + values + "<br>"+ "<br>" + "Votre Group est :" + " " + " " + values1 + "<br>"+ "<br>" + "Votre choix du Club(s) est :" + " " + " " + selected;
-    if (nom.length == "" || nom.length > 30 || regName.test(nom)<0) {
+    if (nom.length == "" || nom.length > 30 || regName.test(nom)===false) {
         document.getElementById('return1').innerHTML="S'il vous plait saisez votre nom!!";
     }
-    if (prenom.length == "" || prenom.length > 30 || regName.test(prenom) <0) {
+    if (prenom.length == "" || prenom.length > 30 || regName.test(prenom)===false) {
         document.getElementById('return2').innerHTML="S'il vous plait saisez votre prenom!!";
     }
-    if(email =="" || validRegex.test(email)<0){
+    if(email =="" || validRegex.test(email)===false){
         document.getElementById('return3').innerHTML="S'il vous plait saisez valid format d'email!!";
     }
-    if(tele =="" || phoneRGEX.test(tele)<0){
+    if(tele =="" || phoneRGEX.test(tele)===false){
         document.getElementById('return4').innerHTML="S'il vous plait saisez valid format de telephone!!";
     }
     if(values == ""){
@@ -68,10 +68,14 @@ function validName(){
     if (regName.test(nom)===false){
         document.getElementById('nom').style.border='3px solid red';
         document.getElementById('nom').style.background='rgb(248, 147, 147)';
+        document.getElementById('return1').innerHTML="S'il vous plait saisez votre correct nom!!";
+        document.getElementById('return1').style.color="red";
     }
     else{
         document.getElementById('nom').style.border='3px solid green';
         document.getElementById('nom').style.background='rgb(130, 246, 130)';   
+        document.getElementById('return1').innerHTML="Votre nom est valide";
+        document.getElementById('return1').style.color="green";
     }
 }
 
@@ -81,12 +85,14 @@ function validPrenom(){
     if (regName.test(prenom)===false) {
         document.getElementById('prenom').style.border='3px solid red';
         document.getElementById('prenom').style.background='rgb(248, 147, 147)';
-
+        document.getElementById('return2').innerHTML="S'il vous plait saisez votre correct prenom!!";
+        document.getElementById('return2').style.color="red";
     }
     else{
         document.getElementById('prenom').style.border='3px solid green';
         document.getElementById('prenom').style.background='rgb(130, 246, 130)';
-
+        document.getElementById('return2').innerHTML="Votre prenom est valide";
+        document.getElementById('return2').style.color="green";
     }
 }
 
@@ -98,11 +104,15 @@ function validTell(){
     if(phoneRGEX.test(tele)&&phone==10){
         document.getElementById('tele').style.border='3px solid green';
         document.getElementById('tele').style.background='rgb(130, 246, 130)';
+        document.getElementById('return4').innerHTML="Votre telé est valide";
+        document.getElementById('return4').style.color="green";
 
     }
     else{
         document.getElementById('tele').style.border='3px solid red';
         document.getElementById('tele').style.background='rgb(248, 147, 147)';
+        document.getElementById('return4').innerHTML="S'il vous plait saisez votre correct telephone!!";
+        document.getElementById('return4').style.color="red";
 
     }
 }
@@ -116,12 +126,14 @@ function validEmail(){
     if(validRegex.test(email)){
         document.getElementById('email').style.border='3px solid green';
         document.getElementById('email').style.background='rgb(130, 246, 130)';
+        document.getElementById('return3').innerHTML="Votre email est valide";
+        document.getElementById('return3').style.color="green";
     }
     else{
         document.getElementById('email').style.border='3px solid red';
         document.getElementById('email').style.background='rgb(248, 147, 147)';
-
-        
+        document.getElementById('return3').innerHTML="S'il vous plait saisez votre correct email!!";
+        document.getElementById('return3').style.color="red";
     }
 }
 
